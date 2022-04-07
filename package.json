@@ -1,0 +1,34 @@
+{
+  "name": "keybind",
+  "version": "1.0.0",
+  "description": "快捷键组合库",
+  "main": "lib/keybind.umd.js",
+  "module": "lib/keybind.es5.js",
+  "typings": "types/keybind.d.ts",
+  "scripts": {
+    "start": "rollup -c rollup.config.ts -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxpsuper/keybind.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zxpsuper/keybind/issues"
+  },
+  "homepage": "https://github.com/zxpsuper/keybind#readme",
+  "devDependencies": {
+    "lodash.camelcase": "^4.3.0",
+    "rollup": "^2.70.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@suporka/mini-emitter": "1.0.1"
+  }
+}
