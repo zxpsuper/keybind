@@ -287,14 +287,11 @@
    * @param {string=} action passed in
    */
   function _pickBestAction(key, modifiers, action) {
-    // if no action was picked in we should try to pick the one
-    // that we think would work best for this key
+    // 如果从 map 中无法找到值，则选择 keypress
     if (!action) {
       action = _getReverseMap()[key] ? 'keydown' : 'keypress'
     }
-
-    // modifier keys don't work as expected with keypress,
-    // switch to keydown
+    // 如果有修饰键，则用 keydown
     if (action == 'keypress' && modifiers.length) {
       action = 'keydown'
     }
