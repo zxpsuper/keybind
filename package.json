@@ -1,12 +1,14 @@
 {
-  "name": "keybind",
-  "version": "1.0.0",
+  "name": "@suporka/keybind",
+  "version": "1.0.1",
   "description": "快捷键组合库",
   "main": "lib/keybind.umd.js",
   "module": "lib/keybind.es5.js",
   "typings": "types/keybind.d.ts",
   "scripts": {
-    "start": "rollup -c rollup.config.ts -w"
+    "start": "rollup -c rollup.config.ts -w",
+    "test": "mocha --reporter=nyan tests/test.keybind.js",
+    "build": "rollup -c rollup.config.ts"
   },
   "repository": {
     "type": "git",
@@ -25,8 +27,14 @@
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.3",
+    "chai": "^4.2.0",
+    "jsdom": "^13.1.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^5.2.0",
+    "sinon": "^7.2.2"
   },
   "dependencies": {
     "@suporka/mini-emitter": "1.0.1"

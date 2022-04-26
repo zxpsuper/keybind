@@ -1,4 +1,7 @@
-export const KEYCODE_MAP: Record<number, string> = Object.freeze({
+/**
+ * 按键码
+ */
+export const KEYCODE_MAP = Object.freeze({
   106: '*',
   107: '+',
   109: '-',
@@ -17,6 +20,9 @@ export const KEYCODE_MAP: Record<number, string> = Object.freeze({
   222: "'"
 })
 
+/**
+ * shift 按键
+ */
 export const SHIFT_MAP = Object.freeze({
   '~': '`',
   '!': '1',
@@ -39,7 +45,10 @@ export const SHIFT_MAP = Object.freeze({
   '|': '\\'
 })
 
-export const MAP: Record<number, string> = Object.freeze({
+/**
+ * 通用按键 map
+ */
+export const MAP = Object.freeze({
   8: 'backspace',
   9: 'tab',
   13: 'enter',
@@ -91,4 +100,17 @@ export const MAP: Record<number, string> = Object.freeze({
   129: 'f18',
   130: 'f19',
   224: 'meta'
+})
+
+/**
+ * 特殊别名
+ * TODD: 不知道有什么用，除了 plus 
+ */
+export const SPECIAL_ALIASES = Object.freeze({
+  option: 'alt',
+  command: 'meta',
+  return: 'enter',
+  escape: 'esc',
+  plus: '+',
+  mod: /Mac|iPod|iPhone|iPad/.test(navigator.platform) ? 'meta' : 'ctrl'
 })

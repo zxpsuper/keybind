@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <!-- <script src="./lib/keybind.umd.js"></script> -->
-    <script src="./test.js"></script>
+    <style>
+      html {
+        background-color: #4293ef;
+      }
+      .parallax {
+        width: 100%;
+        height: 100vh;
+        background-image: url('./1.png');
+        background-size: 25px 25px;
+
+        animation: progressMove 1s linear infinite;
+      }
+      @keyframes progressMove {
+        0% {
+          background-position: 0px 100px;
+        }
+        100% {
+          background-position: 0px 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text">
+    <script src="./lib/keybind.umd.js"></script>
     <script>
-        Mousetrap.bind('4 + 6', function() { console.log('4'); });
+      console.log(keybind)
+      keybind.bind(['a', 'b', 'c'],() => {
+        console.log(1)
+      })
     </script>
-</body>
+  </body>
 </html>
